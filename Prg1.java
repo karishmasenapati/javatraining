@@ -1,22 +1,23 @@
-/*1. Take values of length and breadth of a rectangle from user and check if it is square or not.
-*/
+/*1. Take 10 integer inputs from user and store them in an array and print them on screen.*/
+
 import java.util.Scanner;
-public class Prg1{
-    public static void main(String[] args){
+
+public class Prg1 {
+    public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Enter the length of the rectangle:");
-        int length = scanner.nextInt();
-        
-        System.out.println("Enter the breadth of the rectangle:");
-        int breadth = scanner.nextInt();
-        
-        if (length == breadth) {
-            System.out.println("It is a square.");
-        } else {
-            System.out.println("It is not a square.");
+        int[] numbers = new int[10];
+        System.out.println("Enter 10 integers:");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter integer " + (i + 1) + ": ");
+            numbers[i] = scanner.nextInt();
         }
-        
         scanner.close();
+        System.out.println("The entered integers are:");
+
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
     }
 }
